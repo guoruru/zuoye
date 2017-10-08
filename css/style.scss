@@ -1,0 +1,270 @@
+@charset "utf-8";
+*{
+  margin:0px;
+  padding:0px;
+  text-decoration:none;
+  box-sizing:border-box;
+  font-size:.32rem;
+  font-style:normal;
+  font-weight:normal;
+}
+ul,li{
+  list-style:none;
+}
+html{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+body{
+	font-size:.32rem;
+}
+img,div,body,html,ul,li,a{
+ -webkit-touch-callout: none; 
+ }
+ input,button{
+ outline:0;
+ }
+ button{
+ cursor:pointer;
+ }
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+color: #ccc;
+font-size:.28rem;}
+@mixin nums($h:auto){
+	width:100%;
+	height:$h;
+}
+@mixin flex($j:center){
+	display:flex;
+	justify-content:$j;
+	align-items:center;
+}
+html,body,.wrap{
+width:100%;
+height:100%;
+overflow:hidden;
+}
+.wrap{
+	display:flex;
+	flex-direction:column;
+}
+.header{
+	@include nums(1.4rem);
+	@include flex(space-between);
+	background:#F5F5F5;
+	padding:0 .15rem;
+	a{
+	&:nth-child(2){
+		font-size:.36rem;
+	}
+	&:nth-child(3) i.icon{
+		font-size:.5rem;
+	}
+		font-size:.32rem;
+		color:#333;
+		i.icon{
+			font-size:.4rem;
+		}
+	}
+	
+}
+.scroll{
+	@include nums();
+	flex-direction:column;
+	overflow-y:scroll;
+	background:#e5e5e5;
+}
+.nav{
+	@include nums(.75rem);
+	@include flex(space-between);
+	background:#fff;
+	padding:0 .4rem;
+	a{	
+		color:#ccc;
+		padding:.12rem 0;
+		&:nth-child(1){
+			color:#333;
+			border-bottom:3px solid  #FF4123;
+		}
+	}
+}
+.tit{
+	@include nums(.9rem);
+	padding:0 .2rem;
+	position:relative;
+	line-height:.92rem;
+	input{
+		width:100%;
+		height:.5rem;
+		background:#fff;
+		border-radius:.15rem;
+		border:0;
+		padding-left:.5rem;
+	}
+	i.icon{
+		color:#585858;
+		position:absolute;
+		left:.3rem;
+		top:.04rem;
+		font-size:.32rem;
+	}
+}
+.banner{
+	@include nums();
+	img{
+	width:100%;
+	height:100%;
+	display:block;
+	}
+}
+.title{
+	@include nums(.84rem);	
+	text-align:center;
+	line-height:.84rem;
+	background:#fff;
+	color:#585858;
+}
+.data{
+	@include nums();
+	@include flex(space-between);
+	padding:0 .2rem .8rem;
+	background:#fff;
+	dl{
+		width:33.3%;
+		padding:.2rem 0;
+		border-top:1px solid #ccc;
+		border-bottom:1px solid #ccc;
+		dt{	
+			color:#FF4123;
+			font-size:.4rem;
+			b{	
+				padding:.03rem .08rem;
+				background:#FF4123;
+				color:#fff;
+				font-size:.3rem;
+				margin-right:.2rem;
+			}
+		}
+		dd{
+			text-align:center;
+			font-size:.3rem;
+			color:#FF4123;
+			padding-top:.1rem;
+		}
+	}
+}
+.icons{
+	@include nums(2rem);
+	border-top:.2rem solid #ccc;
+	border-bottom:.2rem solid #ccc;
+	@include flex(space-between);
+	line-height:2;
+	padding:.2rem;
+	background:#fff;
+	a{
+	width:25%;
+	height:100%;
+	color:#333;
+	text-align:center;
+	&:nth-child(2n) i.icon{
+	background:#19BDE5;
+	}
+		i.icon{
+		display:inline-block;
+		width:.8rem;
+		height:.8rem;
+		color:#fff;
+		border-radius:50%;
+		background:#F16363;
+		text-align:center;
+		line-height:.8rem;
+		font-size:.4rem;
+		}
+	}
+	small{
+	display:block;
+	color:#000;
+	font-size:.28rem;	}
+}
+.talk{
+	@include nums(.77rem);
+	@include flex(space-between);
+	border-bottom:1px solid #ccc;
+	background:#fff;
+	padding:0 .2rem;
+	i.icon{
+		font-size:.34rem;
+		margin-right:.2rem;
+		color:orange;
+	}
+	span{
+		font-size:.34rem;
+		font-weight:600;
+		color:#5a5a5a;
+	}
+	b{
+		font-size:.3rem;
+		i.icon{
+		font-size:.3rem;
+		}
+		
+	}
+}
+.dl_cont{
+@include nums();
+padding:.3rem .2rem;
+background:#fff;
+dl{
+	@include nums();
+	position:relative;
+	dt{
+		width:1.8rem;
+		height:1.8rem;
+		position:absolute;
+		top:.2rem;
+		left:0rem;
+		img{
+		 width:100%;
+		 height:100%;
+		}
+	}
+	dd{
+		padding-left:2rem;
+		padding-top:.1rem;
+		h2{
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			overflow:hidden;
+		}
+		p{
+			color:#CACACA;
+			font-size:.3rem;
+			line-height:.4rem;
+			padding-top:.1rem;
+		}
+
+	}
+}
+	
+}
+.footer{
+	@include nums(1.8rem);
+	border-top:2px solid #ccc;
+	@include flex(space-between);
+	line-height:1.4;
+	text-align:center;
+	a{
+	width:20%;
+	height:100%;
+	color:#333;
+	i.icon{
+	font-size:.4rem;
+	}
+	}
+	small{
+	display:block;
+	color:#333;
+	font-size:.26rem;
+	}
+}
